@@ -1,10 +1,11 @@
 from tkinter import *
 from pickle import load, dump
+from menu import 
 
 def set_status(text, color='black'):
     canvas.itemconfig(text_id, text=text, fill=color)
 
-def key_handler():
+def key_handler(event):
     if event.keycode == KEY_UP:
         menu.menu_up(canvas)
     if event.keycode == KEY_DOWN:
