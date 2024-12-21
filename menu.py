@@ -1,8 +1,23 @@
 from tkinter import *
 from pickle import load, dump
 
-from main import canvas
 
+
+def pause_toggle():
+    global pause
+    pause = not pause
+    if pause:
+        print('ПАУЗА')
+    else:
+        print('ВПЕРЕД!')
+
+def menu_toggle(canvas):
+    global menu_mode
+    menu_mode = not menu_mode
+    if menu_mode:
+        menu_show(canvas)
+    else:
+        menu_hide(canvas)
 
 def menu_enter(canvas, player_size, player1, player2, set_status, y1, y2):
     if menu_current_index == 0:
